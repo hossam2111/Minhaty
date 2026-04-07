@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>مِنَحْتي — منحة حكومة كازاخستان 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0B1E3D;
+  --navy-light: #12305E;
+  --navy-dark: #060F1F;
+  --gold: #C9A84C;
+  --gold-light: #E8C96A;
+  --gold-pale: #F9F0D8;
+  --cream: #FAF6EE;
+  --white: #FFFFFF;
+  --green: #1A6B3C;
+  --green-light: #E8F5EE;
+  --red: #C0392B;
+  --red-light: #FDEDED;
+  --amber: #D97706;
+  --amber-light: #FEF3C7;
+  --text-dark: #0B1E3D;
+  --text-mid: #3D5A80;
+  --text-muted: #6B7A99;
+  --border: rgba(11,30,61,0.12);
+  --shadow-sm: 0 2px 8px rgba(11,30,61,0.08);
+  --shadow-md: 0 8px 32px rgba(11,30,61,0.14);
+  --shadow-lg: 0 20px 60px rgba(11,30,61,0.2);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  direction: rtl;
+  overflow-x: hidden;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed; top: 0; right: 0; left: 0; z-index: 1000;
+  background: rgba(11,30,61,0.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  padding: 0 1.5rem;
+  height: 64px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-size: 1.5rem; font-weight: 900; color: var(--gold);
+  letter-spacing: -0.02em;
+}
+.nav-logo span { color: var(--white); }
+.nav-cta {
+  display: flex; align-items: center; gap: 0.4rem;
+  background: #25D366; color: white;
+  padding: 0.5rem 1.1rem; border-radius: 50px;
+  font-size: 0.85rem; font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 4px 14px rgba(37,211,102,0.35);
+}
+.nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 20px rgba(37,211,102,0.45); }
+.nav-cta svg { width: 16px; height: 16px; flex-shrink: 0; }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  background: var(--navy-dark);
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+  padding: 6rem 1.5rem 3rem;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 80%, rgba(26,107,60,0.08) 0%, transparent 50%),
+    linear-gradient(160deg, #060F1F 0%, #0B1E3D 50%, #060F1F 100%);
+}
+.hero-geo {
+  position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+}
+.hero-geo::before {
+  content: '';
+  position: absolute; top: -20%; right: -10%;
+  width: 600px; height: 600px;
+  border: 1px solid rgba(201,168,76,0.08);
+  border-radius: 50%;
+}
+.hero-geo::after {
+  content: '';
+  position: absolute; bottom: -10%; left: -10%;
+  width: 400px; height: 400px;
+  border: 1px solid rgba(201,168,76,0.06);
+  border-radius: 50%;
+}
+.hero-content {
+  position: relative; z-index: 1;
+  max-width: 800px; width: 100%;
+  text-align: center;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: rgba(201,168,76,0.15);
+  border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold-light);
+  padding: 0.4rem 1rem; border-radius: 50px;
+  font-size: 0.82rem; font-weight: 500;
+  margin-bottom: 1.5rem;
+  animation: fadeDown 0.6s ease both;
+}
+.hero-title {
+  font-size: clamp(2rem, 5.5vw, 3.5rem);
+  font-weight: 900; line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 0.75rem;
+  animation: fadeUp 0.7s 0.15s ease both;
+}
+.hero-title .gold { color: var(--gold); }
+.hero-sub {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: rgba(255,255,255,0.72);
+  line-height: 1.7;
+  max-width: 600px; margin: 0 auto 2rem;
+  animation: fadeUp 0.7s 0.25s ease both;
+}
+.hero-pills {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem;
+  margin-bottom: 2.5rem;
+  animation: fadeUp 0.7s 0.35s ease both;
+}
+.pill {
+  display: flex; align-items: center; gap: 0.35rem;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.85);
+  padding: 0.4rem 0.9rem; border-radius: 50px;
+  font-size: 0.82rem;
+}
+.pill .icon { font-size: 0.9rem; }
+.hero-buttons {
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+  animation: fadeUp 0.7s 0.45s ease both;
+}
+.btn-wa {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: #25D366; color: white;
+  padding: 0.9rem 2rem; border-radius: 50px;
+  font-size: 1rem; font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(37,211,102,0.4);
+  transition: all 0.25s;
+}
+.btn-wa:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(37,211,102,0.5); }
+.btn-wa svg { width: 20px; height: 20px; }
+.btn-outline {
+  display: flex; align-items: center; gap: 0.5rem;
+  border: 1.5px solid rgba(201,168,76,0.5);
+  color: var(--gold-light); background: transparent;
+  padding: 0.9rem 2rem; border-radius: 50px;
+  font-size: 1rem; font-weight: 600;
+  text-decoration: none; cursor: pointer;
+  transition: all 0.25s;
+}
+.btn-outline:hover { background: rgba(201,168,76,0.1); border-color: var(--gold); }
+.hero-deadline {
+  margin-top: 2rem;
+  animation: fadeUp 0.7s 0.55s ease both;
+}
+.deadline-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  background: rgba(192,57,43,0.2);
+  border: 1px solid rgba(192,57,43,0.4);
+  color: #F1948A;
+  padding: 0.45rem 1.1rem; border-radius: 50px;
+  font-size: 0.83rem; font-weight: 600;
+}
+
+/* ===== COUNTDOWN ===== */
+.countdown-section {
+  background: linear-gradient(135deg, #7B3F00 0%, var(--amber) 100%);
+  padding: 2rem 1.5rem;
+}
+.countdown-inner {
+  max-width: 900px; margin: 0 auto;
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.5rem;
+}
+.countdown-text h3 {
+  font-size: 1.1rem; font-weight: 700; color: white; margin-bottom: 0.3rem;
+}
+.countdown-text p { font-size: 0.85rem; color: rgba(255,255,255,0.8); }
+.countdown-timer {
+  display: flex; gap: 0.75rem; align-items: center;
+}
+.time-block {
+  text-align: center;
+  background: rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 0.5rem 0.75rem;
+  min-width: 58px;
+}
+.time-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.8rem; font-weight: 400;
+  color: white; line-height: 1;
+  display: block;
+}
+.time-label { font-size: 0.65rem; color: rgba(255,255,255,0.75); margin-top: 2px; }
+.time-sep { font-size: 1.5rem; color: rgba(255,255,255,0.6); font-weight: 300; }
+
+/* ===== BENEFITS ===== */
+.benefits {
+  padding: 5rem 1.5rem;
+  background: var(--cream);
+}
+.section-header {
+  text-align: center; max-width: 640px; margin: 0 auto 3.5rem;
+}
+.section-tag {
+  display: inline-block;
+  background: var(--gold-pale); color: var(--amber);
+  padding: 0.3rem 1rem; border-radius: 50px;
+  font-size: 0.78rem; font-weight: 700;
+  letter-spacing: 0.05em; margin-bottom: 0.8rem;
+}
+.section-title {
+  font-size: clamp(1.6rem, 4vw, 2.3rem);
+  font-weight: 900; color: var(--navy);
+  line-height: 1.25; margin-bottom: 0.75rem;
+}
+.section-sub {
+  font-size: 1rem; color: var(--text-muted); line-height: 1.7;
+}
+.benefits-grid {
+  max-width: 1000px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;
+}
+.benefit-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.75rem;
+  transition: transform 0.25s, box-shadow 0.25s;
+  position: relative; overflow: hidden;
+}
+.benefit-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.benefit-card::before {
+  content: '';
+  position: absolute; top: 0; right: 0;
+  width: 80px; height: 80px;
+  border-radius: 0 20px 0 80px;
+  opacity: 0.06;
+}
+.benefit-card.gold::before { background: var(--gold); }
+.benefit-card.green::before { background: var(--green); }
+.benefit-card.navy::before { background: var(--navy); }
+.benefit-icon {
+  width: 52px; height: 52px;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem; margin-bottom: 1rem;
+}
+.benefit-icon.gold { background: var(--gold-pale); }
+.benefit-icon.green { background: var(--green-light); }
+.benefit-icon.navy { background: rgba(11,30,61,0.07); }
+.benefit-title {
+  font-size: 1.05rem; font-weight: 800; color: var(--navy); margin-bottom: 0.4rem;
+}
+.benefit-desc { font-size: 0.9rem; color: var(--text-muted); line-height: 1.65; }
+
+/* ===== DEGREES ===== */
+.degrees {
+  padding: 5rem 1.5rem;
+  background: white;
+}
+.degrees-grid {
+  max-width: 900px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem;
+}
+.degree-card {
+  border: 2px solid var(--border);
+  border-radius: 20px; padding: 2rem;
+  text-align: center;
+  transition: all 0.25s;
+  cursor: default;
+}
+.degree-card:hover { border-color: var(--gold); box-shadow: var(--shadow-sm); }
+.degree-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem; color: var(--gold); line-height: 1;
+  margin-bottom: 0.25rem;
+}
+.degree-name {
+  font-size: 1.15rem; font-weight: 800; color: var(--navy); margin-bottom: 0.6rem;
+}
+.degree-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+/* ===== DOCS ===== */
+.docs {
+  padding: 5rem 1.5rem;
+  background: var(--navy);
+  position: relative; overflow: hidden;
+}
+.docs::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.docs-inner { max-width: 860px; margin: 0 auto; }
+.docs .section-title { color: white; }
+.docs .section-sub { color: rgba(255,255,255,0.6); }
+.docs .section-tag { background: rgba(201,168,76,0.15); color: var(--gold-light); }
+.docs-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.75rem;
+}
+.doc-item {
+  display: flex; align-items: flex-start; gap: 0.75rem;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 14px; padding: 1rem 1.1rem;
+  transition: background 0.2s;
+}
+.doc-item:hover { background: rgba(255,255,255,0.07); }
+.doc-check {
+  width: 22px; height: 22px; flex-shrink: 0;
+  background: rgba(201,168,76,0.2);
+  border: 1px solid rgba(201,168,76,0.4);
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--gold); font-size: 0.7rem; margin-top: 1px;
+}
+.doc-text { font-size: 0.88rem; color: rgba(255,255,255,0.82); line-height: 1.55; }
+.doc-note { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 2px; }
+
+/* ===== PRICING ===== */
+.pricing {
+  padding: 5rem 1.5rem;
+  background: var(--cream);
+}
+.pricing-grid {
+  max-width: 900px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem;
+}
+.price-card {
+  background: white;
+  border: 1.5px solid var(--border);
+  border-radius: 24px; padding: 2rem;
+  position: relative; overflow: hidden;
+  transition: all 0.3s;
+}
+.price-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+.price-card.featured {
+  border-color: var(--gold);
+  background: linear-gradient(160deg, #FBF7EE 0%, white 100%);
+  box-shadow: 0 8px 40px rgba(201,168,76,0.2);
+}
+.price-badge {
+  position: absolute; top: 1rem; left: 1rem;
+  background: var(--gold); color: white;
+  font-size: 0.72rem; font-weight: 700;
+  padding: 0.25rem 0.75rem; border-radius: 50px;
+}
+.price-degree {
+  font-size: 0.8rem; font-weight: 700; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+.price-name {
+  font-size: 1.4rem; font-weight: 900; color: var(--navy); margin-bottom: 1.25rem;
+}
+.price-row {
+  display: flex; align-items: baseline; gap: 0.5rem; margin-bottom: 0.4rem;
+}
+.price-old {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem; color: var(--text-muted);
+  text-decoration: line-through;
+}
+.price-new {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5rem; color: var(--navy); font-weight: 400;
+}
+.price-cur { font-size: 1rem; color: var(--text-mid); }
+.price-save {
+  display: inline-block;
+  background: var(--green-light); color: var(--green);
+  font-size: 0.75rem; font-weight: 700;
+  padding: 0.2rem 0.6rem; border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+.price-divider {
+  border: none; border-top: 1px solid var(--border); margin: 1.25rem 0;
+}
+.price-features { list-style: none; margin-bottom: 1.75rem; }
+.price-features li {
+  display: flex; align-items: flex-start; gap: 0.6rem;
+  font-size: 0.88rem; color: var(--text-mid); padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.price-features li:last-child { border-bottom: none; }
+.feat-check {
+  color: var(--green); font-size: 0.8rem; margin-top: 2px; flex-shrink: 0;
+}
+.btn-price {
+  display: block; width: 100%; text-align: center;
+  background: var(--navy); color: white;
+  padding: 0.85rem; border-radius: 14px;
+  font-size: 0.95rem; font-weight: 700;
+  text-decoration: none;
+  transition: all 0.25s;
+}
+.btn-price:hover { background: var(--navy-light); transform: translateY(-1px); }
+.price-card.featured .btn-price {
+  background: var(--gold); color: white;
+  box-shadow: 0 6px 20px rgba(201,168,76,0.4);
+}
+.price-card.featured .btn-price:hover { background: var(--gold-light); }
+
+/* ===== WHY US ===== */
+.why {
+  padding: 5rem 1.5rem;
+  background: white;
+}
+.why-grid {
+  max-width: 900px; margin: 0 auto;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;
+}
+.why-item { text-align: center; padding: 1.5rem 1rem; }
+.why-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 3rem; color: var(--gold);
+  line-height: 1; margin-bottom: 0.5rem;
+}
+.why-title { font-size: 1rem; font-weight: 800; color: var(--navy); margin-bottom: 0.4rem; }
+.why-desc { font-size: 0.85rem; color: var(--text-muted); line-height: 1.6; }
+
+/* ===== FAQ ===== */
+.faq {
+  padding: 5rem 1.5rem;
+  background: var(--cream);
+}
+.faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
+.faq-item {
+  background: white; border: 1px solid var(--border); border-radius: 16px; overflow: hidden;
+}
+.faq-q {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1.1rem 1.4rem; cursor: pointer;
+  font-size: 0.97rem; font-weight: 700; color: var(--navy);
+  user-select: none;
+}
+.faq-q .faq-icon {
+  width: 26px; height: 26px; flex-shrink: 0;
+  background: var(--gold-pale);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--amber); font-size: 1rem; font-weight: 400;
+  transition: transform 0.3s;
+}
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+.faq-a {
+  max-height: 0; overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.2s;
+  font-size: 0.9rem; color: var(--text-mid); line-height: 1.7;
+  padding: 0 1.4rem;
+}
+.faq-item.open .faq-a { max-height: 300px; padding: 0 1.4rem 1.2rem; }
+
+/* ===== FINAL CTA ===== */
+.final-cta {
+  padding: 6rem 1.5rem;
+  background: var(--navy-dark);
+  text-align: center;
+  position: relative; overflow: hidden;
+}
+.final-cta::before {
+  content: 'مِنَحْتي';
+  position: absolute;
+  font-size: 18rem; font-weight: 900;
+  color: rgba(201,168,76,0.03);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap; pointer-events: none;
+  font-family: 'Tajawal', sans-serif;
+}
+.final-cta h2 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 900; color: white; margin-bottom: 0.75rem;
+  position: relative;
+}
+.final-cta h2 .gold { color: var(--gold); }
+.final-cta p {
+  font-size: 1.05rem; color: rgba(255,255,255,0.65);
+  margin-bottom: 2.5rem; position: relative;
+}
+.final-buttons {
+  display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;
+  position: relative;
+}
+.btn-wa-big {
+  display: flex; align-items: center; gap: 0.6rem;
+  background: #25D366; color: white;
+  padding: 1.1rem 2.5rem; border-radius: 50px;
+  font-size: 1.1rem; font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 10px 40px rgba(37,211,102,0.45);
+  transition: all 0.25s;
+}
+.btn-wa-big:hover { transform: translateY(-2px); box-shadow: 0 14px 50px rgba(37,211,102,0.55); }
+.btn-wa-big svg { width: 22px; height: 22px; }
+.final-phones {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;
+  margin-top: 2.5rem; position: relative;
+}
+.phone-chip {
+  display: flex; align-items: center; gap: 0.5rem;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.8);
+  padding: 0.5rem 1.1rem; border-radius: 50px;
+  font-size: 0.88rem; direction: ltr;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: #060F1F;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  border-top: 1px solid rgba(201,168,76,0.15);
+}
+footer .foot-logo {
+  font-size: 1.4rem; font-weight: 900; color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+footer .foot-logo span { color: rgba(255,255,255,0.5); }
+footer p { font-size: 0.8rem; color: rgba(255,255,255,0.3); line-height: 1.6; }
+
+/* ===== FLOATING WA ===== */
+.float-wa {
+  position: fixed; bottom: 1.5rem; left: 1.5rem; z-index: 999;
+  display: flex; align-items: center; gap: 0.5rem;
+  background: #25D366; color: white;
+  padding: 0.85rem 1.4rem; border-radius: 50px;
+  font-size: 0.9rem; font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 30px rgba(37,211,102,0.5);
+  animation: pulse 2s infinite;
+}
+.float-wa svg { width: 20px; height: 20px; }
+@media (min-width: 769px) { .float-wa { display: none; } }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 8px 30px rgba(37,211,102,0.5); }
+  50% { box-shadow: 0 8px 40px rgba(37,211,102,0.75); }
+}
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.visible { opacity: 1; transform: none; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .countdown-inner { flex-direction: column; text-align: center; }
+  .countdown-timer { justify-content: center; flex-wrap: wrap; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .final-buttons { flex-direction: column; align-items: center; }
+  .float-wa { bottom: 1rem; left: 1rem; right: 1rem; justify-content: center; border-radius: 14px; }
+}
+
+/* Divider line gold */
+.gold-line {
+  width: 60px; height: 3px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin: 0.75rem auto 0;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-logo">مِنَحْتي<span> ·</span></div>
+  <a href="https://wa.me/201003403147?text=أهلاً%2C%20أريد%20التقديم%20على%20منحة%20كازاخستان%202026" class="nav-cta" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.541 5.876L.057 23.882l6.194-1.623A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.359-.213-3.718.975.993-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+    قدّم الآن
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-geo"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🔥 مفتوح الآن للتقديم — العرب من جميع الدول</div>
+    <h1 class="hero-title">
+      منحة حكومة <span class="gold">كازاخستان</span> 2026<br>
+      ادرس بالمجان وغيّر حياتك
+    </h1>
+    <p class="hero-sub">
+      تمويل كامل للدراسة + راتب شهري + شهادة معترفة عالمياً.<br>
+      بكالوريوس، ماجستير، ودكتوراه — كل التخصصات متاحة.
+    </p>
+    <div class="hero-pills">
+      <div class="pill"><span class="icon">🎓</span> تمويل كامل</div>
+      <div class="pill"><span class="icon">💰</span> راتب شهري</div>
+      <div class="pill"><span class="icon">🌍</span> شهادة معترفة</div>
+      <div class="pill"><span class="icon">✈️</span> فرصة سفر</div>
+      <div class="pill"><span class="icon">📋</span> كل التخصصات</div>
+    </div>
+    <div class="hero-buttons">
+      <a href="https://wa.me/201003403147?text=أهلاً%2C%20أريد%20التقديم%20على%20منحة%20كازاخستان%202026" class="btn-wa" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.541 5.876L.057 23.882l6.194-1.623A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.359-.213-3.718.975.993-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+        تواصل معنا الآن عبر واتساب
+      </a>
+      <a href="#pricing" class="btn-outline">عرض الأسعار ↓</a>
+    </div>
+    <div class="hero-deadline">
+      <div class="deadline-chip">⏰ آخر موعد للتقديم: 31 مايو 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="countdown-section">
+  <div class="countdown-inner">
+    <div class="countdown-text">
+      <h3>⚡ عرض خاص محدود — وفّر حتى 30 دولار</h3>
+      <p>سعر مخفض لفترة محدودة — لا تفوّت الفرصة</p>
+    </div>
+    <div class="countdown-timer">
+      <div class="time-block"><span class="time-num" id="cd-days">00</span><span class="time-label">يوم</span></div>
+      <span class="time-sep">:</span>
+      <div class="time-block"><span class="time-num" id="cd-hours">00</span><span class="time-label">ساعة</span></div>
+      <span class="time-sep">:</span>
+      <div class="time-block"><span class="time-num" id="cd-mins">00</span><span class="time-label">دقيقة</span></div>
+      <span class="time-sep">:</span>
+      <div class="time-block"><span class="time-num" id="cd-secs">00</span><span class="time-label">ثانية</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- BENEFITS -->
+<section class="benefits">
+  <div class="section-header reveal">
+    <div class="section-tag">مزايا المنحة</div>
+    <h2 class="section-title">لماذا كازاخستان؟</h2>
+    <div class="gold-line"></div>
+    <p class="section-sub" style="margin-top:0.75rem;">منحة حكومية كاملة من أقوى المنح في العالم — مفتوحة لجميع الطلاب العرب</p>
+  </div>
+  <div class="benefits-grid">
+    <div class="benefit-card gold reveal">
+      <div class="benefit-icon gold">💰</div>
+      <div class="benefit-title">تمويل كامل للدراسة</div>
+      <div class="benefit-desc">الرسوم الدراسية، السكن، والمعيشة — كل شيء مغطى من الحكومة الكازاخستانية.</div>
+    </div>
+    <div class="benefit-card green reveal">
+      <div class="benefit-icon green">📅</div>
+      <div class="benefit-title">راتب شهري منتظم</div>
+      <div class="benefit-desc">احصل على مبلغ شهري لتغطية مصاريف الحياة اليومية خلال فترة الدراسة.</div>
+    </div>
+    <div class="benefit-card navy reveal">
+      <div class="benefit-icon navy">🏛️</div>
+      <div class="benefit-title">جامعات حكومية قوية</div>
+      <div class="benefit-desc">ادرس في جامعات حكومية كازاخستانية بمستوى أكاديمي رفيع وشهادة معترفة دولياً.</div>
+    </div>
+    <div class="benefit-card gold reveal">
+      <div class="benefit-icon gold">🌐</div>
+      <div class="benefit-title">شهادة معترفة عالمياً</div>
+      <div class="benefit-desc">شهادة دراسية مقبولة في معظم دول العالم تفتح لك أبواب التوظيف والتميز المهني.</div>
+    </div>
+    <div class="benefit-card green reveal">
+      <div class="benefit-icon green">🧳</div>
+      <div class="benefit-title">تجربة حياة جديدة</div>
+      <div class="benefit-desc">فرصة للسفر والاندماج في بيئة متعددة الثقافات وبناء شبكة علاقات دولية.</div>
+    </div>
+    <div class="benefit-card navy reveal">
+      <div class="benefit-icon navy">📚</div>
+      <div class="benefit-title">كل التخصصات متاحة</div>
+      <div class="benefit-desc">الطب، الهندسة، علوم الحاسب، إدارة الأعمال، وعشرات التخصصات الأخرى.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DEGREES -->
+<section class="degrees">
+  <div class="section-header reveal">
+    <div class="section-tag">الدرجات العلمية</div>
+    <h2 class="section-title">متاح لكل المستويات</h2>
+    <div class="gold-line"></div>
+  </div>
+  <div class="degrees-grid">
+    <div class="degree-card reveal">
+      <div class="degree-num">B</div>
+      <div class="degree-name">بكالوريوس</div>
+      <div class="degree-desc">للطلاب الحاصلين على شهادة ثانوية الدراسة 4 سنوات بتمويل كامل</div>
+    </div>
+    <div class="degree-card reveal">
+      <div class="degree-num">M</div>
+      <div class="degree-name">ماجستير</div>
+      <div class="degree-desc">للخريجين الجامعيين تطوير مهني وأكاديمي على المستوى الدولي</div>
+    </div>
+    <div class="degree-card reveal">
+      <div class="degree-num">Ph</div>
+      <div class="degree-name">دكتوراه</div>
+      <div class="degree-desc">للباحثين والأكاديميين — تشمل مقترح البحث ودعماً كاملاً لرسالتك</div>
+    </div>
+  </div>
+</section>
+
+<!-- DOCS -->
+<section class="docs">
+  <div class="docs-inner">
+    <div class="section-header reveal">
+      <div class="section-tag">المستندات المطلوبة</div>
+      <h2 class="section-title">جهّز ملفك معنا</h2>
+      <div class="gold-line"></div>
+      <p class="section-sub" style="margin-top:0.75rem;">فريق مِنَحْتي يجهّز لك كل الملف باحترافية ويراجع كل مستند قبل التقديم</p>
+    </div>
+    <div class="docs-grid reveal">
+      <div class="doc-item">
+        <div class="doc-check">✓</div>
+        <div><div class="doc-text">إثبات الهوية الشخصية أو اللجوء</div></div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-check">✓</div>
+        <div><div class="doc-text">شهادة التخرج وبيان الدرجات</div><div class="doc-note">آخر مؤهل دراسي</div></div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-check">✓</div>
+        <div><div class="doc-text">الخطاب التحفيزي (Motivation Letter)</div></div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-check">✓</div>
+        <div><div class="doc-text">خطابا التوصية (2 خطابات)</div><div class="doc-note">نجهّزهم لك من دكاترة</div></div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-check">✓</div>
+        <div><div class="doc-text">نموذج الطلب الرسمي</div></div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-check">✓</div>
+        <div><div class="doc-text">الشهادة الصحية + نتيجة HIV</div><div class="doc-note">من جهة صحية رسمية</div></div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-check">✓</div>
+        <div><div class="doc-text">مقترح البحث</div><div class="doc-note">للدكتوراه فقط</div></div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-check">✓</div>
+        <div><div class="doc-text">شهادة إجادة الإنجليزية</div><div class="doc-note">ماجستير ودكتوراه</div></div>
+      </div>
+      <div class="doc-item">
+        <div class="doc-check" style="border-color:rgba(201,168,76,0.2); color:rgba(255,255,255,0.3);">○</div>
+        <div><div class="doc-text" style="color:rgba(255,255,255,0.45);">خطاب قبول جامعي كازاخستاني</div><div class="doc-note">اختياري — غير إلزامي</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="section-header reveal">
+    <div class="section-tag">الأسعار</div>
+    <h2 class="section-title">عرض خاص لفترة محدودة</h2>
+    <div class="gold-line"></div>
+    <p class="section-sub" style="margin-top:0.75rem;">خدمة إعداد الملف الكامل بيد خبراء — بأفضل سعر</p>
+  </div>
+  <div class="pricing-grid">
+    <!-- Bachelor -->
+    <div class="price-card reveal">
+      <div class="price-degree">Bachelor</div>
+      <div class="price-name">بكالوريوس</div>
+      <div class="price-row">
+        <span class="price-old">$100</span>
+        <span class="price-new">$80</span>
+        <span class="price-cur">دولار</span>
+      </div>
+      <div class="price-save">وفّر $20</div>
+      <hr class="price-divider">
+      <ul class="price-features">
+        <li><span class="feat-check">✓</span> إعداد الملف الكامل</li>
+        <li><span class="feat-check">✓</span> الخطاب التحفيزي</li>
+        <li><span class="feat-check">✓</span> خطابا توصية من دكاترة</li>
+        <li><span class="feat-check">✓</span> مراجعة قبل التقديم</li>
+        <li><span class="feat-check">✓</span> دعوة دراسية</li>
+      </ul>
+      <a href="https://wa.me/201003403147?text=أهلاً%2C%20أريد%20التقديم%20على%20منحة%20كازاخستان%20—%20بكالوريوس" class="btn-price" target="_blank" rel="noopener">ابدأ التقديم ↗</a>
+    </div>
+    <!-- Masters - Featured -->
+    <div class="price-card featured reveal">
+      <div class="price-badge">الأكثر طلباً</div>
+      <div class="price-degree">Master's</div>
+      <div class="price-name">ماجستير</div>
+      <div class="price-row">
+        <span class="price-old">$125</span>
+        <span class="price-new">$100</span>
+        <span class="price-cur">دولار</span>
+      </div>
+      <div class="price-save">وفّر $25</div>
+      <hr class="price-divider">
+      <ul class="price-features">
+        <li><span class="feat-check">✓</span> إعداد الملف الكامل</li>
+        <li><span class="feat-check">✓</span> الخطاب التحفيزي</li>
+        <li><span class="feat-check">✓</span> خطابا توصية من دكاترة</li>
+        <li><span class="feat-check">✓</span> مراجعة شاملة</li>
+        <li><span class="feat-check">✓</span> دعوة دراسية</li>
+      </ul>
+      <a href="https://wa.me/201003403147?text=أهلاً%2C%20أريد%20التقديم%20على%20منحة%20كازاخستان%20—%20ماجستير" class="btn-price" target="_blank" rel="noopener">ابدأ التقديم ↗</a>
+    </div>
+    <!-- PhD -->
+    <div class="price-card reveal">
+      <div class="price-degree">PhD</div>
+      <div class="price-name">دكتوراه</div>
+      <div class="price-row">
+        <span class="price-old">$150</span>
+        <span class="price-new">$120</span>
+        <span class="price-cur">دولار</span>
+      </div>
+      <div class="price-save">وفّر $30</div>
+      <hr class="price-divider">
+      <ul class="price-features">
+        <li><span class="feat-check">✓</span> إعداد الملف الكامل</li>
+        <li><span class="feat-check">✓</span> الخطاب التحفيزي</li>
+        <li><span class="feat-check">✓</span> خطابا توصية من دكاترة</li>
+        <li><span class="feat-check">✓</span> دعوة دراسية</li>
+        <li><span class="feat-check" style="color:var(--amber)">+</span> مقترح بحث (حتى 1500 كلمة) — <strong>$100 إضافية</strong></li>
+      </ul>
+      <a href="https://wa.me/201003403147?text=أهلاً%2C%20أريد%20التقديم%20على%20منحة%20كازاخستان%20—%20دكتوراه" class="btn-price" target="_blank" rel="noopener">ابدأ التقديم ↗</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="section-header reveal">
+    <div class="section-tag">لماذا مِنَحْتي؟</div>
+    <h2 class="section-title">فريق متخصص يضمن قبولك</h2>
+    <div class="gold-line"></div>
+  </div>
+  <div class="why-grid">
+    <div class="why-item reveal">
+      <div class="why-num">100%</div>
+      <div class="why-title">ملف احترافي كامل</div>
+      <div class="why-desc">كل مستند يُعدّ ويُراجع بدقة قبل التقديم</div>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-num">2+</div>
+      <div class="why-title">خطابات توصية</div>
+      <div class="why-desc">من دكاترة حقيقيين — نجهّزها لك دون تعب</div>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-num">📩</div>
+      <div class="why-title">دعوة دراسية</div>
+      <div class="why-desc">نستخرج لك الدعوة من الجامعة الكازاخستانية</div>
+    </div>
+    <div class="why-item reveal">
+      <div class="why-num">⚡</div>
+      <div class="why-title">توفير وقت ومجهود</div>
+      <div class="why-desc">بدلاً من التخبط وحدك، فريقنا يرافقك خطوة بخطوة</div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-header reveal">
+    <div class="section-tag">أسئلة شائعة</div>
+    <h2 class="section-title">عندك سؤال؟</h2>
+    <div class="gold-line"></div>
+  </div>
+  <div class="faq-list">
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        هل المنحة مجانية 100%؟
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">نعم، المنحة تشمل تمويلاً كاملاً للدراسة من الحكومة الكازاخستانية — الرسوم والسكن والمعيشة. المبلغ الذي تدفعه لنا هو مقابل خدمة إعداد ملف التقديم فقط.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        هل متاح التقديم للاجئين؟
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">نعم، المنحة مفتوحة للاجئين بوثيقة لجوء سارية. فريقنا على دراية بالمتطلبات الخاصة للاجئين.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        ما هي لغة الدراسة؟
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">تتوفر برامج باللغة الإنجليزية والروسية. للماجستير والدكتوراه، يُشترط إثبات كفاءة في اللغة الإنجليزية أو إثبات أن دراستك السابقة كانت بالإنجليزية.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        متى يبدأ فريق مِنَحْتي في إعداد ملفي؟
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">فور تواصلك معنا عبر واتساب وتأكيد التفاصيل، يبدأ الفريق فوراً. نسعى لإنجاز الملف في أقصر وقت ممكن قبل إغلاق باب التقديم.</div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        هل أحتاج خطاب قبول من جامعة كازاخستانية؟
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">لا، خطاب القبول الجامعي اختياري وغير إلزامي. لكن وجوده يزيد من فرص القبول — وفريقنا يساعدك في استخراجه إذا أردت.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta">
+  <h2>لا تضيّع <span class="gold">فرصة حياتك</span></h2>
+  <p>آخر موعد للتقديم: 31 مايو 2026 — تواصل معنا الآن وابدأ رحلتك</p>
+  <div class="final-buttons">
+    <a href="https://wa.me/201003403147?text=أهلاً%2C%20أريد%20التقديم%20على%20منحة%20كازاخستان%202026" class="btn-wa-big" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.541 5.876L.057 23.882l6.194-1.623A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.359-.213-3.718.975.993-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+      قدّم الآن عبر واتساب
+    </a>
+  </div>
+  <div class="final-phones">
+    <div class="phone-chip">📞 +20 100 340 3147</div>
+    <div class="phone-chip">📞 +7 707 348 6433</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-logo">مِنَحْتي<span> — دكتور المنح</span></div>
+  <p>جميع الحقوق محفوظة © 2026 · مِنَحْتي<br>
+  نحن لسنا الجهة الحكومية المانحة — نقدم خدمة إعداد ملفات التقديم فقط</p>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<a href="https://wa.me/201003403147?text=أهلاً%2C%20أريد%20التقديم%20على%20منحة%20كازاخستان%202026" class="float-wa" target="_blank" rel="noopener">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.561 4.14 1.541 5.876L.057 23.882l6.194-1.623A11.955 11.955 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.007-1.37l-.359-.213-3.718.975.993-3.63-.234-.373A9.818 9.818 0 1112 21.818z"/></svg>
+  قدّم الآن
+</a>
+
+<script>
+// Countdown to May 31, 2026
+function updateCountdown() {
+  var target = new Date('2026-05-31T23:59:59');
+  var now = new Date();
+  var diff = target - now;
+  if (diff <= 0) {
+    document.getElementById('cd-days').textContent = '00';
+    document.getElementById('cd-hours').textContent = '00';
+    document.getElementById('cd-mins').textContent = '00';
+    document.getElementById('cd-secs').textContent = '00';
+    return;
+  }
+  var days = Math.floor(diff / 86400000);
+  var hours = Math.floor((diff % 86400000) / 3600000);
+  var mins = Math.floor((diff % 3600000) / 60000);
+  var secs = Math.floor((diff % 60000) / 1000);
+  document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
+  document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
+  document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
+  document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+// FAQ toggle
+function toggleFaq(el) {
+  var item = el.parentElement;
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){ i.classList.remove('open'); });
+  if (!isOpen) item.classList.add('open');
+}
+
+// Scroll reveal
+var reveals = document.querySelectorAll('.reveal');
+var observer = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+  });
+}, { threshold: 0.12 });
+reveals.forEach(function(r) { observer.observe(r); });
+</script>
+</body>
+</html>
